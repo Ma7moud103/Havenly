@@ -9,10 +9,8 @@ const Link = ({ label, to, icon }: IProps) => {
   return (
     <NavLink
       className={({ isActive }) =>
-        `font-sans text-[1.3rem] hover:translate-x-0.5  transition hover:scale-[1.01] hover:text-gold md:flex md:items-center md:gap-x-1 block items-baseline gap-0 ${
-          isActive
-            ? "text-gold scale-[1.01] translate-x-0.5 "
-            : "text-white-1  "
+        `font-sans text-[1.3rem] md:text-[1.1rem] hover:translate-x-0.5 text-white-1 transition hover:scale-[1.01] hover:text-gold md:flex md:items-center md:gap-x-1 block items-baseline gap-0 ${
+          isActive ? " scale-[1.01] translate-x-0.5 " : "  "
         } `
       }
       to={to}

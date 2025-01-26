@@ -16,10 +16,18 @@ body {
   --color-black: #1c1c1c;
   --color-gold: rgb(181 161 145 / 0.8);
 
+  /* spacing */
+  --spacing-mainPadding:7rem;
+  --spacing-smPadding:3rem;
+
+  /* overlay */
+  --color-overlay:rgba(0,0,0,0.8)
+
   --breakpoint-sm: 30rem;
 
   /* animations */
   --animate-fade-in-scale: fade-in-scale 0.3s ease-out;
+  --animate-backgroundImage: fade-Image 24s ease-in-out infinite;
   @keyframes fade-in-scale {
     0% {
       opacity: 0;
@@ -28,6 +36,24 @@ body {
     100% {
       opacity: 1;
       transform: scale(1);
+    }
+  }
+
+  @keyframes fade-Image {
+    0% {
+      background-image: url("./assets//layout001.avif");
+    }
+    25% {
+      background-image: url("./assets//layout002.avif");
+    }
+    50% {
+      background-image: url("./assets//layout003.avif");
+    }
+    75% {
+      background-image: url("./assets//layout004.avif");
+    }
+    100% {
+      background-image: url("./assets//layout001.avif");
     }
   }
 }

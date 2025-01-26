@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomeLayout from "./layouts/HomeLayout";
 import MainLayout from "./layouts/MainLayout";
-import Home from "./pages/Home";
 import Restaurants from "./pages/Restaurants";
 
 const App = () => {
@@ -8,9 +8,10 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route index element={<Home />} />
-          <Route path="/" element={<Home />} />
+          <Route index element={<HomeLayout />} />
+          <Route path="/" element={<HomeLayout />} />
           <Route path="/restaurants" element={<Restaurants />} />
+          <Route path="/rooms" element={<Restaurants />} />
         </Route>
       </Routes>
     </BrowserRouter>
