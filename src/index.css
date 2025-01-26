@@ -1,0 +1,33 @@
+@layer theme, base, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+
+body {
+  font-family: "Cardo", serif;
+  font-weight: 500;
+  font-style: normal;
+}
+@theme {
+  /* ...colors */
+  --color-main-grey: #51555a;
+  --color-white-1: #ffffff;
+  --color-white-2: #f4f4f4;
+  --color-black: #1c1c1c;
+  --color-gold: rgb(181 161 145 / 0.8);
+
+  --breakpoint-sm: 30rem;
+
+  /* animations */
+  --animate-fade-in-scale: fade-in-scale 0.3s ease-out;
+  @keyframes fade-in-scale {
+    0% {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
