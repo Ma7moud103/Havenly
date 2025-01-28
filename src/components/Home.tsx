@@ -1,9 +1,8 @@
 import { motion } from "motion/react";
-import Button from "../ui/Button";
 import { Link } from "react-router-dom";
 const Home = () => {
   return (
-    <section className="w-full  h-full animate-backgroundImage bg-cover relative">
+    <section className="w-full h-screen animate-backgroundImage bg-cover relative">
       <div className="absolute w-full flex flex-col items-center justify-center h-full top-0 start-0 end-0 bottom-0 bg-[rgba(0,0,0,0.3)]">
         <header className="px-4 sm:px-6 md:px-8 lg:px-10 space-y-3 text-center">
           <h1 className="text-white-1 text-[2rem] sm:text-[3rem] text-center">
