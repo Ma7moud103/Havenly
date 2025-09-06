@@ -1,11 +1,14 @@
 import supabase from "../lib/supabase";
-import { useState } from "react";
+import { useState, type ChangeEvent } from "react";
 
-export default function UploadAvatar({ user }) {
+interface IUser {
+  user: { id: String };
+}
+export default function UploadAvatar({ user }: IUser) {
   const [uploading, setUploading] = useState(false);
 
-  async function handleUpload(event) {
-    const file = event.target.files[0];
+  async function handleUpload(event: ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0];
     if (!file) return;
 
     const fileExt = file.name.split(".").pop();
