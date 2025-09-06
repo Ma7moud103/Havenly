@@ -1,8 +1,8 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import Navbar from "../../components/Navbar";
 import styles from "./Home.module.css";
 const Home = () => {
-  const mainRef = useRef(null);
+  const mainRef = useRef<HTMLElement | null>(null);
 
   return (
     <main ref={mainRef} className={styles.main}>

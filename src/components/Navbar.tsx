@@ -1,19 +1,24 @@
 import { useEffect, useState } from "react";
 import Logo from "./Logo";
 import Links from "./Links";
+import React from "react";
 
-const Navbar = ({ mainRef }) => {
+interface IProps {
+  mainRef: React.RefObject<HTMLElement | null>;
+}
+const Navbar = ({ mainRef }: IProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [toggleMenu, settoggleMenu] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > mainRef.current.offsetHeight - 100);
+      if (mainRef.current)
+        setIsScrolled(window.scrollY > mainRef.current.offsetHeight - 100);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [mainRef]);
 
   return (
     <aside
