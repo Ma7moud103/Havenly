@@ -1,0 +1,61 @@
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  z-index: 1;
+  left: 0;
+}
+
+.main {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.bgSlide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+}
+
+.bgSlide:nth-child(1) {
+  background-image: url("/src/assets/view/01.jpg");
+  animation: fade 10s infinite;
+}
+
+.bgSlide:nth-child(2) {
+  background-image: url("/src/assets/view/02.jpg");
+  animation: fade 10s infinite 5s;
+}
+
+.bgSlide:nth-child(3) {
+  background-image: url("/src/assets/view/04.jpg");
+  animation: fade 10s infinite 10s;
+}
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  } /* fade out ~1.5s */
+  33.33% {
+    opacity: 0;
+  }
+  43.33% {
+    opacity: 1;
+  } /* fade in ~1.5s */
+  100% {
+    opacity: 1;
+  }
+}
